@@ -1,0 +1,42 @@
+@media (max-width: 550px){
+	.flowerNav{
+		display: block;
+	}
+	nav{
+		opacity: 0;
+		transition: opacity .7s linear;
+		position: fixed;
+		top:0;
+		left: -1000px;
+	}
+	.activTagNav{
+		opacity:1;		
+	    top: 80.4px;
+	    left: 0px;
+	    width: 100%;
+	}
+	.activNav{
+		width: 100%; 
+    	display: flex;
+    	flex-direction: column;
+	}
+	.activNav li{
+		text-align: center;
+		background-color: rgb(252,210,192);
+	}
+	.activNav li button{
+		width: 50%;
+		border-bottom: 1px solid white;
+		color:white;
+		background-color: rgb(252,210,192);
+		
+	}
+	.activNav li button{}
+	.activNav li:first-child button{
+		border-top: 1px solid white;
+	}
+	header{
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+}
