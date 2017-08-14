@@ -1,6 +1,38 @@
+@media (max-width: 894px){
+	.contInfo{
+		padding: 0 2rem;
+	}
+}
+@media (max-width: 857px){
+	.contInfo{
+		justify-content: center;
+	}
+	iframe{
+		width: 800px;
+	}
+	.bodyContact p{
+		margin-bottom: 0;
+		font-size: 1.1rem;
+	}
+	.contactList{
+    	padding-bottom: 1.5rem;
+	}
+}
 @media (max-width: 770px){
 	.containerImg{
 		max-width: 300px;
+	}
+}
+@media (max-width: 600px){
+	.bodyContact p{
+		font-size: 1rem;
+    	padding: 2rem 1rem;
+	}
+	.contactList li{
+		font-size: .9rem;
+	}
+	.clock{
+		padding-left: 8.5rem;	
 	}
 }
 
@@ -72,4 +104,24 @@
 	.boldText{
 		font-size: 1.2rem;
 	}
+}
+
+@media (max-width: 492px){
+	.clockH{
+		display: block;
+	}
+	.clockF{
+		display: none;
+	}
+	.clock{
+		padding:0;
+	}
+}
+@media (max-width: 492px){
+	.bodyContact p{
+		font-size: .9rem;
+	}
+	.contactList li{
+		font-size: .8rem;
+	}	
 }

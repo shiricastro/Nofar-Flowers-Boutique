@@ -1,12 +1,38 @@
+/*** nav ***/
 $('.flowerNav').on('click',function(e){
 	$(this).toggleClass('flowerButton')
 	$('.nav').toggleClass('activNav');
-	$('nav').toggleClass('activTagNav');
-	
+	$('nav').toggleClass('activTagNav');	
+});
+$('.navButton').on('click', function(e){
+	showContant($(this).attr('data-name'));
+
 });
 
+
+
+/***ajax***/
+function showContant(name){
+	$('.container').css({"display":"none"});
+	$('.container').html();	
+	$('.container').fadeIn(1000);
+	$.get(''+ name+ ".html"+'',function(data){
+		$('.container').html(data);				
+		if (name === 'home'){
+			$('.container').css({"background":"white"});
+			$('.navButtonHome').addClass('activHome');
+			carousel();
+		}else{
+			$('.navButtonHome').removeClass('activHome');
+			$('.container').css({"background":"inherit"});
+		}
+
+	});	
+}
+
+/***home page**/
+showContant("home");
 var myIndex = 0;
-carousel();
 
 function carousel() {
     var i;
