@@ -56,11 +56,12 @@ button:focus{
 	background-color: inherit;
     border: none;
     font-size: 1.1rem;
+    
     padding: 0 1rem;
 }
 .navButton:hover,
 .navButton:focus,
-.activHome{
+.activButton{
 	outline: none;
 	opacity: .6;
 }

@@ -1,13 +1,19 @@
 /*** nav ***/
 $('.flowerNav').on('click',function(e){
-	$(this).toggleClass('flowerButton')
-	$('.nav').toggleClass('activNav');
-	$('nav').toggleClass('activTagNav');	
+	navActiv();	
 });
 $('.navButton').on('click', function(e){
+	$('.navButton').removeClass('activButton');
+	$(this).addClass('activButton');
+	navActiv();
 	showContant($(this).attr('data-name'));
 
 });
+
+function navActiv(){
+	$('.flowerNav').toggleClass('flowerButton');
+	$('.nav').toggleClass('activNav');	
+}
 
 
 
@@ -20,10 +26,8 @@ function showContant(name){
 		$('.container').html(data);				
 		if (name === 'home'){
 			$('.container').css({"background":"white"});
-			$('.navButtonHome').addClass('activHome');
 			carousel();
 		}else{
-			$('.navButtonHome').removeClass('activHome');
 			$('.container').css({"background":"inherit"});
 		}
 
