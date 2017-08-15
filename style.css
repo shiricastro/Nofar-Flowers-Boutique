@@ -56,7 +56,7 @@ button:focus{
 	background-color: inherit;
     border: none;
     font-size: 1.1rem;
-    
+
     padding: 0 1rem;
 }
 .navButton:hover,
@@ -202,15 +202,16 @@ footer{
 	max-width: 345px;
     align-self: flex-start;
 }
-.containerImg.pic3 {
+.containerImg.pic3,
+.aboutPic.pic3  {
 	z-index: 1;
 	transform: rotate(-10deg);
 }
-.containerImg.pic1 {
+.containerImg.pic1{
 	z-index: 5;
 	transform: rotate(-3deg);
 }
-.containerImg.pic4 {
+.containerImg.pic4{
 	z-index: 3;
 	transform: rotate(4deg);
 }
@@ -225,7 +226,8 @@ footer{
 }
 
 /***contact page***/
-.bodyContact{
+.bodyContact,
+.bodyAbout{
 	position: relative;
 	top:6rem;
     display: flex;
@@ -236,7 +238,8 @@ footer{
     margin: 0 auto;
     /*background-color: white;*/
 }
-.bodyContact h2{
+.bodyContact h2,
+.bodyAbout h2{
 	font-size: 2rem;
 	padding-bottom: 2rem;
 }
@@ -301,4 +304,46 @@ footer{
 .wrap{
 	background-color: white;
 	width: 100%;
+}
+/*** about page ***/
+.aboutPic{
+	padding: 10px ;
+	background: black;
+	position: relative;
+	max-width: 265px;
+    align-self: flex-start;
+    opacity: .6;
+    box-shadow: 3px 5px 15px #333;
+}
+.aboutPic.pic1 {
+	z-index: 5;
+}
+.aboutPic.pic4{
+	z-index: 3;
+	transform: rotate(10deg);
+}
+.aboutImg{
+	text-align: center;
+	padding-bottom: 5rem;
+}
+.bodyAbout p{
+	padding: 2rem 3rem 1rem;
+	font-style: normal; 
+	line-height: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0;
+}
+.aboutSpan{
+    font-style: italic;
+    text-align: center;
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    font-weight: bold;
+}
+.aboutPic:hover,
+.aboutPic:focus{
+	z-index: 10;
+	opacity: .7;
 }

@@ -19,10 +19,11 @@ function navActiv(){
 
 /***ajax***/
 function showContant(name){
+	console.log("this is the ajax function");
 	$('.container').css({"display":"none"});
 	$('.container').html();	
 	$('.container').fadeIn(1000);
-	$.get(''+ name+ ".html"+'',function(data){
+	$.get(''+"pages/"+ name+ ".html"+'',function(data){
 		$('.container').html(data);				
 		if (name === 'home'){
 			$('.container').css({"background":"white"});

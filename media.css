@@ -10,7 +10,8 @@
 	iframe{
 		width: 800px;
 	}
-	.bodyContact p{
+	.bodyContact p,
+	.bodyAbout p{
 		margin-bottom: 0;
 		font-size: 1.1rem;
 	}
@@ -22,9 +23,13 @@
 	.containerImg{
 		max-width: 300px;
 	}
+	.aboutPic{
+		max-width: 200px;
+	}
 }
 @media (max-width: 600px){
-	.bodyContact p{
+	.bodyContact p,
+	.bodyAbout p{
 		font-size: 1rem;
     	padding: 2rem 1rem;
 	}
@@ -118,10 +123,27 @@
 	}
 }
 @media (max-width: 492px){
-	.bodyContact p{
+	.bodyContact p,
+	.bodyAbout p{
 		font-size: .9rem;
 	}
 	.contactList li{
 		font-size: .8rem;
 	}	
+}
+@media (max-width: 922px) and (min-width: 771px){
+	.aboutPic.pic1{
+		transform: rotate(10deg);
+	}
+}
+@media (max-width: 720px) and (min-width: 484px){
+	.aboutPic.pic1{
+		transform: rotate(10deg);
+	}	
+}
+@media (max-width: 504px) and (min-width: 484px){
+	.aboutImg{
+		max-width: 95%;
+   		margin: 0 auto;
+	}
 }
