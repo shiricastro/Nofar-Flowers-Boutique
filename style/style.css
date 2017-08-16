@@ -227,7 +227,8 @@ footer{
 
 /***contact page***/
 .bodyContact,
-.bodyAbout{
+.bodyAbout,
+.bodyGallery{
 	position: relative;
 	top:6rem;
     display: flex;
@@ -236,10 +237,10 @@ footer{
     width: 900px;
     max-width: 95%;
     margin: 0 auto;
-    /*background-color: white;*/
 }
 .bodyContact h2,
-.bodyAbout h2{
+.bodyAbout h2,
+.bodyGallery h2{
 	font-size: 2rem;
 	padding-bottom: 2rem;
 }
@@ -305,6 +306,7 @@ footer{
 	background-color: white;
 	width: 100%;
 }
+
 /*** about page ***/
 .aboutPic{
 	padding: 10px ;
@@ -346,4 +348,90 @@ footer{
 .aboutPic:focus{
 	z-index: 10;
 	opacity: .7;
+}
+
+/*** our flowers page ***/
+.galleryImg{
+	margin: 1.5rem 1rem;
+	padding: 10px ;
+	background: white;
+	position: relative;
+	max-width: 200px;
+    align-self: flex-start;
+    opacity: .8;
+    box-shadow: 1px 1px 6px #999;
+    cursor: pointer;
+    transition: all .2s linear;	
+}
+.galleryImg:hover,
+.galleryImg:focus{
+	transform: rotate(0deg);
+	width: 250px;
+	max-width: 250px;
+	opacity: 1;
+	margin:0;
+
+}
+.bodyGallery{
+    width: 1200px;
+}
+
+.selectPic{
+    margin-bottom: 3rem;
+    padding: .5rem;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 6px -6px #999;
+    max-height: 47px;
+    box-sizing: border-box;
+}
+.selectPic span{
+	margin: 0 .5rem;
+}
+.selectPic button{
+	background-color: inherit;
+	border:none;
+	font-size: 1.2rem;
+}
+.select{
+	padding: 0;
+    margin: 0;
+    display: none;
+    
+
+}
+.select li{
+    list-style: none;
+    padding: .4rem;
+    z-index: 500;
+    background-color: white;
+	cursor: pointer;
+}
+
+.activData{
+	display: inline-flex;
+    flex-direction: column;
+    margin: -5px;
+}
+.allPicturs{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.img1{
+	transform: rotate(-5deg);
+}
+.img2{
+	transform: rotate(-3deg);
+}
+.img3{
+	transform: rotate(4deg);
+}
+.img4{
+	transform: rotate(5deg);
+}
+.img5{
+	transform: rotate(3deg);
+}
+.wrapF{
+	text-align: center;
 }
