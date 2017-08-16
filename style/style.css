@@ -5,7 +5,7 @@ body{
 	padding: 0;
 	margin:0;
 	height: 100vh;
-	background-image: url('img/a.png');
+	background-image: url('../img/backgroundImg.png');
 	/*font-family: 'Rambla', sans-serif;*/
 }
 header{

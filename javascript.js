@@ -19,7 +19,6 @@ function navActiv(){
 
 /***ajax***/
 function showContant(name){
-	console.log("this is the ajax function");
 	$('.container').css({"display":"none"});
 	$('.container').html();	
 	$('.container').fadeIn(1000);
