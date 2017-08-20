@@ -131,6 +131,24 @@
 		font-size: .8rem;
 	}	
 }
+@media (max-width: 393px){
+	.selectPic,
+	.selectPic span{
+		font-size: 1rem;
+	}
+
+}
+@media (max-width: 342px){
+	.selectPic span{
+		margin:0;
+	}
+}
+@media (max-width: 307px){
+	.selectPic,
+	.selectPic span{
+		font-size: .8rem;
+	}
+}
 @media (max-width: 922px) and (min-width: 771px){
 	.aboutPic.pic1{
 		transform: rotate(10deg);

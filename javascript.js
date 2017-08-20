@@ -6,7 +6,7 @@ $('.navButton').on('click', function(e){
 	$('.navButton').removeClass('activButton');
 	$(this).addClass('activButton');
 	navActiv();
-	showContant($(this).attr('data-name'));
+	showContant($(this).attr('data-name'), null);
 
 });
 
@@ -18,7 +18,7 @@ function navActiv(){
 
 
 /***ajax***/
-function showContant(name){
+function showContant(name,category,catalogTag){
 	$('.container').css({"display":"none"});
 	$('.container').html();	
 	$('.container').fadeIn(1000);
@@ -27,10 +27,18 @@ function showContant(name){
 		if (name === 'home'){
 			$('.container').css({"background":"white"});
 			carousel();
+			galleryLike();
 		}else if(name === 'flowers'){
 			$('.container').css({"background":"inherit"});
 			gallerySelect();
-			addImgs("bouquets");
+			if (category === null ){
+				addImgs("bouquets");
+			}else{
+				addImgs(`${category}`);	
+				$('.selectVal').html(catalogTag);
+				$('.navButtonHome').removeClass('activButton');
+				$('.navButtonGal').addClass('activButton');
+			}			
 		}else{
 			$('.container').css({"background":"inherit"});
 		}
@@ -63,14 +71,14 @@ function addImgs(dataName){
 		containerImgs.html("");	
 		containerImgs.fadeIn(1000);
 		$(imgs).each(function(i,el){
-			console.log(el);
-			 $('<img>', {"class":`galleryImg`, "src":`img/${el}`}).appendTo(containerImgs);
+			 var randomNum = Math.floor((Math.random() * 6) + 1);
+			 $('<img>', {"class":`galleryImg img${randomNum}`, "src":`img/${el}`}).appendTo(containerImgs);
 		});
 		
 	}
 }
 /***home page**/
-showContant("home");
+showContant("home", null);
 var myIndex = 0;
 
 function carousel() {
@@ -83,4 +91,13 @@ function carousel() {
     if (myIndex > imgSlide.length) {myIndex = 1}    
     $(imgSlide[myIndex-1]).css({"display": "block"});   
     setTimeout(carousel, 3000); 
+}
+
+function galleryLike(){
+	$('.galleryButton').on('click',function(e){
+		e.preventDefault();
+		var catalog = $(e.delegateTarget).attr('data-category');
+		var catalogTag = $(e.delegateTarget).find('h3').html();
+		showContant("flowers",catalog, catalogTag);
+	});
 }

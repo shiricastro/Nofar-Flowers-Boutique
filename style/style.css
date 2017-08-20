@@ -366,8 +366,8 @@ footer{
 .galleryImg:hover,
 .galleryImg:focus{
 	transform: rotate(0deg);
-	width: 250px;
-	max-width: 250px;
+	width: 260px;
+	max-width: 260px;
 	opacity: 1;
 	margin:0;
 
@@ -386,6 +386,9 @@ footer{
 }
 .selectPic span{
 	margin: 0 .5rem;
+}
+.selectPic > span{
+	font-weight: bold;
 }
 .selectPic button{
 	background-color: inherit;
@@ -418,19 +421,22 @@ footer{
     justify-content: space-around;
 }
 .img1{
-	transform: rotate(-5deg);
+	transform: rotate(-8deg);
 }
 .img2{
 	transform: rotate(-3deg);
 }
 .img3{
-	transform: rotate(4deg);
+	transform: rotate(-5deg);
 }
 .img4{
-	transform: rotate(5deg);
+	transform: rotate(8deg);
 }
 .img5{
 	transform: rotate(3deg);
+}
+.img6{
+	transform: rotate(5deg);
 }
 .wrapF{
 	text-align: center;
